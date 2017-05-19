@@ -1,0 +1,929 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27980EF5AB3722909191CAF2 /* Pods_laser_video_processor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE18CF92A45F86014570E5D /* Pods_laser_video_processor.framework */; };
+		755D11997F56FAE2B083BC6F /* Pods_Laser_Processor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A6FEDFF74390370DB0340F /* Pods_Laser_Processor.framework */; };
+		B207EC7C1C619EEE006AF5F9 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EC7B1C619EEE006AF5F9 /* Algorithm.swift */; };
+		B207EC7E1C631BD2006AF5F9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B207EC7D1C631BD2006AF5F9 /* Shaders.metal */; };
+		B207EC831C632C2E006AF5F9 /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B207EC821C632C2E006AF5F9 /* MetalPerformanceShaders.framework */; };
+		B207EC851C632C33006AF5F9 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B207EC841C632C33006AF5F9 /* MetalKit.framework */; };
+		B207EC871C632C39006AF5F9 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B207EC861C632C39006AF5F9 /* Metal.framework */; };
+		B2088E2B1C5749C7001F4199 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2088E2A1C5749C7001F4199 /* PreferenceViewController.swift */; };
+		B212DF211C57EEF80009B4F6 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212DF201C57EEF80009B4F6 /* Preference.swift */; };
+		B23278611C76083A006B3C3D /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23278601C76083A006B3C3D /* PlotView.swift */; };
+		B23278631C760E92006B3C3D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23278621C760E92006B3C3D /* QuartzCore.framework */; };
+		B23278651C760E97006B3C3D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23278641C760E97006B3C3D /* Accelerate.framework */; };
+		B23D18261CCDF1430090C695 /* CameraFocusSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D18251CCDF1430090C695 /* CameraFocusSquareView.swift */; };
+		B2469C4F1C8AF92B00397216 /* UIImage+LPAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2469C4E1C8AF92B00397216 /* UIImage+LPAdditions.swift */; };
+		B2469C501C8AF92B00397216 /* UIImage+LPAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2469C4E1C8AF92B00397216 /* UIImage+LPAdditions.swift */; };
+		B24CB1AF1C8C0AC0005F8056 /* UIViewController+LPAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CB1AE1C8C0AC0005F8056 /* UIViewController+LPAdditions.swift */; };
+		B25913D71D2255B700EE3C0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B25913D61D2255B700EE3C0E /* AppDelegate.m */; };
+		B25913DA1D2255B700EE3C0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B25913D91D2255B700EE3C0E /* main.m */; };
+		B25913DD1D2255B700EE3C0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25913DC1D2255B700EE3C0E /* ViewController.m */; };
+		B25913DF1D2255B700EE3C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25913DE1D2255B700EE3C0E /* Assets.xcassets */; };
+		B25913E21D2255B700EE3C0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25913E01D2255B700EE3C0E /* Main.storyboard */; };
+		B25913E81D22612F00EE3C0E /* CalculationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26182181C87325500794120 /* CalculationManager.swift */; };
+		B25913E91D22617200EE3C0E /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EC7B1C619EEE006AF5F9 /* Algorithm.swift */; };
+		B25913EA1D22617700EE3C0E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212DF201C57EEF80009B4F6 /* Preference.swift */; };
+		B25913EB1D2262EE00EE3C0E /* CalculationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261821D1C873CF700794120 /* CalculationManagerDelegate.swift */; };
+		B25913EC1D22632200EE3C0E /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2698B0D1CCFF1230047E0CB /* Queue.swift */; };
+		B25913ED1D22633000EE3C0E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2726A031C63494400DF097F /* opencv2.framework */; };
+		B25913EE1D22634500EE3C0E /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2726A071C634B4500DF097F /* OpenCVWrapper.mm */; };
+		B25913EF1D22663D00EE3C0E /* DataSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE2B21C4D676B00B65901 /* DataSetManager.swift */; };
+		B25913F01D22664200EE3C0E /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B361C4F4B66007268BC /* DataSet.swift */; };
+		B25913F11D22664600EE3C0E /* DataSetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B381C4F4CDC007268BC /* DataSetImage.swift */; };
+		B25913F41D226A5F00EE3C0E /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B25913F31D226A5F00EE3C0E /* DraggableView.m */; };
+		B25913FF1D22790100EE3C0E /* VideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261821F1C873D1800794120 /* VideoProcessor.swift */; };
+		B25914021D22A14A00EE3C0E /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25914011D22A14A00EE3C0E /* CropViewController.m */; };
+		B261820E1C870D3000794120 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B261820D1C870D3000794120 /* Photos.framework */; };
+		B26182111C87113700794120 /* VideoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B26182101C87113700794120 /* VideoPicker.m */; };
+		B26182191C87325500794120 /* CalculationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26182181C87325500794120 /* CalculationManager.swift */; };
+		B261821E1C873CF700794120 /* CalculationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261821D1C873CF700794120 /* CalculationManagerDelegate.swift */; };
+		B26182201C873D1800794120 /* VideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261821F1C873D1800794120 /* VideoProcessor.swift */; };
+		B2698AEC1CCDF6670047E0CB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2698AEB1CCDF6670047E0CB /* CameraView.swift */; };
+		B2698AEE1CCE02DA0047E0CB /* CameraSampleAreaSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2698AED1CCE02DA0047E0CB /* CameraSampleAreaSquareView.swift */; };
+		B2698B0E1CCFF1230047E0CB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2698B0D1CCFF1230047E0CB /* Queue.swift */; };
+		B2726A041C63494400DF097F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2726A031C63494400DF097F /* opencv2.framework */; };
+		B2726A081C634B4500DF097F /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2726A071C634B4500DF097F /* OpenCVWrapper.mm */; };
+		B2DC5B321C4F4635007268BC /* DataSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B311C4F4635007268BC /* DataSetViewController.swift */; };
+		B2DC5B351C4F476D007268BC /* DataSetImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B341C4F476D007268BC /* DataSetImageTableViewCell.swift */; };
+		B2DC5B371C4F4B66007268BC /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B361C4F4B66007268BC /* DataSet.swift */; };
+		B2DC5B391C4F4CDC007268BC /* DataSetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC5B381C4F4CDC007268BC /* DataSetImage.swift */; };
+		B2DFE28D1C4D5FE900B65901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE28C1C4D5FE900B65901 /* AppDelegate.swift */; };
+		B2DFE2921C4D5FE900B65901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DFE2901C4D5FE900B65901 /* Main.storyboard */; };
+		B2DFE2941C4D5FE900B65901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DFE2931C4D5FE900B65901 /* Assets.xcassets */; };
+		B2DFE2971C4D5FE900B65901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DFE2951C4D5FE900B65901 /* LaunchScreen.storyboard */; };
+		B2DFE2A21C4D5FE900B65901 /* Laser_ProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE2A11C4D5FE900B65901 /* Laser_ProcessorTests.swift */; };
+		B2DFE2AE1C4D621600B65901 /* DataSetManageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE2AD1C4D621600B65901 /* DataSetManageTableViewController.swift */; };
+		B2DFE2B31C4D676B00B65901 /* DataSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE2B21C4D676B00B65901 /* DataSetManager.swift */; };
+		B2DFE2B51C4DD19300B65901 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFE2B41C4DD19300B65901 /* CaptureViewController.swift */; };
+		B2DFE2B71C4DD1CA00B65901 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DFE2B61C4DD1CA00B65901 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2DFE29E1C4D5FE900B65901 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2DFE2811C4D5FE900B65901 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2DFE2881C4D5FE900B65901;
+			remoteInfo = "Laser Processor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D18F5B62870E3663D5C718 /* Pods-laser-video-processor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-laser-video-processor.release.xcconfig"; path = "Pods/Target Support Files/Pods-laser-video-processor/Pods-laser-video-processor.release.xcconfig"; sourceTree = "<group>"; };
+		2488A35A7C5CFC9E4C9A574A /* Pods-laser-video-processor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-laser-video-processor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-laser-video-processor/Pods-laser-video-processor.debug.xcconfig"; sourceTree = "<group>"; };
+		27A6FEDFF74390370DB0340F /* Pods_Laser_Processor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laser_Processor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34612E085A56D85306A6B4A4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE18CF92A45F86014570E5D /* Pods_laser_video_processor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_laser_video_processor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B207EC7B1C619EEE006AF5F9 /* Algorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Algorithm.swift; path = Classes/Algorithm.swift; sourceTree = "<group>"; };
+		B207EC7D1C631BD2006AF5F9 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Shaders.metal; path = GPU/Shaders.metal; sourceTree = "<group>"; };
+		B207EC821C632C2E006AF5F9 /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		B207EC841C632C33006AF5F9 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		B207EC861C632C39006AF5F9 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		B2088E2A1C5749C7001F4199 /* PreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceViewController.swift; path = ViewControllers/PreferenceViewController.swift; sourceTree = "<group>"; };
+		B212DF201C57EEF80009B4F6 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preference.swift; path = Classes/Preference.swift; sourceTree = "<group>"; };
+		B23278601C76083A006B3C3D /* PlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlotView.swift; path = ViewControllers/PlotView.swift; sourceTree = "<group>"; };
+		B23278621C760E92006B3C3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B23278641C760E97006B3C3D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B23D18251CCDF1430090C695 /* CameraFocusSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraFocusSquareView.swift; path = Views/CameraFocusSquareView.swift; sourceTree = "<group>"; };
+		B2469C4E1C8AF92B00397216 /* UIImage+LPAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+LPAdditions.swift"; path = "Extensions/UIImage+LPAdditions.swift"; sourceTree = "<group>"; };
+		B24CB1AE1C8C0AC0005F8056 /* UIViewController+LPAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+LPAdditions.swift"; path = "Extensions/UIViewController+LPAdditions.swift"; sourceTree = "<group>"; };
+		B25913D31D2255B700EE3C0E /* laser-video-processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "laser-video-processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25913D51D2255B700EE3C0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B25913D61D2255B700EE3C0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B25913D91D2255B700EE3C0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B25913DB1D2255B700EE3C0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B25913DC1D2255B700EE3C0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B25913DE1D2255B700EE3C0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B25913E11D2255B700EE3C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B25913E31D2255B700EE3C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25913F21D226A5F00EE3C0E /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		B25913F31D226A5F00EE3C0E /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		B25913F51D226B6C00EE3C0E /* DraggableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewDelegate.h; sourceTree = "<group>"; };
+		B25914001D22A14A00EE3C0E /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
+		B25914011D22A14A00EE3C0E /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
+		B261820D1C870D3000794120 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		B261820F1C87113700794120 /* VideoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoPicker.h; path = Classes/VideoPicker.h; sourceTree = "<group>"; };
+		B26182101C87113700794120 /* VideoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPicker.m; path = Classes/VideoPicker.m; sourceTree = "<group>"; };
+		B26182181C87325500794120 /* CalculationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculationManager.swift; path = Classes/CalculationManager.swift; sourceTree = "<group>"; };
+		B261821D1C873CF700794120 /* CalculationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculationManagerDelegate.swift; path = Classes/CalculationManagerDelegate.swift; sourceTree = "<group>"; };
+		B261821F1C873D1800794120 /* VideoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoProcessor.swift; path = Classes/VideoProcessor.swift; sourceTree = "<group>"; };
+		B2698AEB1CCDF6670047E0CB /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
+		B2698AED1CCE02DA0047E0CB /* CameraSampleAreaSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraSampleAreaSquareView.swift; path = Views/CameraSampleAreaSquareView.swift; sourceTree = "<group>"; };
+		B2698B0D1CCFF1230047E0CB /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Classes/Queue.swift; sourceTree = "<group>"; };
+		B2726A031C63494400DF097F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		B2726A051C63499C00DF097F /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVWrapper.h; path = Classes/OpenCVWrapper.h; sourceTree = "<group>"; };
+		B2726A061C6349D600DF097F /* LP-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LP-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2726A071C634B4500DF097F /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = Classes/OpenCVWrapper.mm; sourceTree = "<group>"; };
+		B2DC5B311C4F4635007268BC /* DataSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSetViewController.swift; path = ViewControllers/DataSetViewController.swift; sourceTree = "<group>"; };
+		B2DC5B341C4F476D007268BC /* DataSetImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSetImageTableViewCell.swift; path = Views/DataSetImageTableViewCell.swift; sourceTree = "<group>"; };
+		B2DC5B361C4F4B66007268BC /* DataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSet.swift; path = Classes/DataSet.swift; sourceTree = "<group>"; };
+		B2DC5B381C4F4CDC007268BC /* DataSetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSetImage.swift; path = Classes/DataSetImage.swift; sourceTree = "<group>"; };
+		B2DFE2891C4D5FE900B65901 /* Laser Processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Laser Processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DFE28C1C4D5FE900B65901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2DFE2911C4D5FE900B65901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2DFE2931C4D5FE900B65901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2DFE2961C4D5FE900B65901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2DFE2981C4D5FE900B65901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DFE29D1C4D5FE900B65901 /* Laser ProcessorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Laser ProcessorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DFE2A11C4D5FE900B65901 /* Laser_ProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laser_ProcessorTests.swift; sourceTree = "<group>"; };
+		B2DFE2A31C4D5FE900B65901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DFE2AD1C4D621600B65901 /* DataSetManageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSetManageTableViewController.swift; path = ViewControllers/DataSetManageTableViewController.swift; sourceTree = "<group>"; };
+		B2DFE2B21C4D676B00B65901 /* DataSetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSetManager.swift; path = Classes/DataSetManager.swift; sourceTree = "<group>"; };
+		B2DFE2B41C4DD19300B65901 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureViewController.swift; path = ViewControllers/CaptureViewController.swift; sourceTree = "<group>"; };
+		B2DFE2B61C4DD1CA00B65901 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E466D6A64EF0A40DFDE24021 /* Pods-Laser Processor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laser Processor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Laser Processor/Pods-Laser Processor.release.xcconfig"; sourceTree = "<group>"; };
+		F2020F424CA6A94ED668C1DD /* Pods-Laser Processor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laser Processor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Laser Processor/Pods-Laser Processor.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B25913D01D2255B700EE3C0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25913ED1D22633000EE3C0E /* opencv2.framework in Frameworks */,
+				27980EF5AB3722909191CAF2 /* Pods_laser_video_processor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE2861C4D5FE900B65901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B261820E1C870D3000794120 /* Photos.framework in Frameworks */,
+				B23278651C760E97006B3C3D /* Accelerate.framework in Frameworks */,
+				B23278631C760E92006B3C3D /* QuartzCore.framework in Frameworks */,
+				B2726A041C63494400DF097F /* opencv2.framework in Frameworks */,
+				B207EC871C632C39006AF5F9 /* Metal.framework in Frameworks */,
+				B207EC851C632C33006AF5F9 /* MetalKit.framework in Frameworks */,
+				B207EC831C632C2E006AF5F9 /* MetalPerformanceShaders.framework in Frameworks */,
+				B2DFE2B71C4DD1CA00B65901 /* AVFoundation.framework in Frameworks */,
+				755D11997F56FAE2B083BC6F /* Pods_Laser_Processor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE29A1C4D5FE900B65901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		649587982F1CB250DB3ADFB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B261820D1C870D3000794120 /* Photos.framework */,
+				B23278641C760E97006B3C3D /* Accelerate.framework */,
+				B23278621C760E92006B3C3D /* QuartzCore.framework */,
+				B2726A031C63494400DF097F /* opencv2.framework */,
+				B207EC861C632C39006AF5F9 /* Metal.framework */,
+				B207EC841C632C33006AF5F9 /* MetalKit.framework */,
+				B207EC821C632C2E006AF5F9 /* MetalPerformanceShaders.framework */,
+				B2DFE2B61C4DD1CA00B65901 /* AVFoundation.framework */,
+				34612E085A56D85306A6B4A4 /* Pods.framework */,
+				27A6FEDFF74390370DB0340F /* Pods_Laser_Processor.framework */,
+				AAE18CF92A45F86014570E5D /* Pods_laser_video_processor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F5ECAA73DEC75C9D5F57508 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2020F424CA6A94ED668C1DD /* Pods-Laser Processor.debug.xcconfig */,
+				E466D6A64EF0A40DFDE24021 /* Pods-Laser Processor.release.xcconfig */,
+				2488A35A7C5CFC9E4C9A574A /* Pods-laser-video-processor.debug.xcconfig */,
+				00D18F5B62870E3663D5C718 /* Pods-laser-video-processor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B207EC7F1C631BEB006AF5F9 /* GPU */ = {
+			isa = PBXGroup;
+			children = (
+				B207EC7D1C631BD2006AF5F9 /* Shaders.metal */,
+			);
+			name = GPU;
+			sourceTree = "<group>";
+		};
+		B2088E261C57483D001F4199 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B2469C4D1C8AF91000397216 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2469C4E1C8AF92B00397216 /* UIImage+LPAdditions.swift */,
+				B24CB1AE1C8C0AC0005F8056 /* UIViewController+LPAdditions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B25913D41D2255B700EE3C0E /* laser-video-processor */ = {
+			isa = PBXGroup;
+			children = (
+				B25913D51D2255B700EE3C0E /* AppDelegate.h */,
+				B25913D61D2255B700EE3C0E /* AppDelegate.m */,
+				B25913DB1D2255B700EE3C0E /* ViewController.h */,
+				B25913DC1D2255B700EE3C0E /* ViewController.m */,
+				B25913F21D226A5F00EE3C0E /* DraggableView.h */,
+				B25913F31D226A5F00EE3C0E /* DraggableView.m */,
+				B25913F51D226B6C00EE3C0E /* DraggableViewDelegate.h */,
+				B25914001D22A14A00EE3C0E /* CropViewController.h */,
+				B25914011D22A14A00EE3C0E /* CropViewController.m */,
+				B25913DE1D2255B700EE3C0E /* Assets.xcassets */,
+				B25913E01D2255B700EE3C0E /* Main.storyboard */,
+				B25913E31D2255B700EE3C0E /* Info.plist */,
+				B25913D81D2255B700EE3C0E /* Supporting Files */,
+			);
+			path = "laser-video-processor";
+			sourceTree = "<group>";
+		};
+		B25913D81D2255B700EE3C0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B25913D91D2255B700EE3C0E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2DC5B331C4F46FE007268BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC5B341C4F476D007268BC /* DataSetImageTableViewCell.swift */,
+				B23D18251CCDF1430090C695 /* CameraFocusSquareView.swift */,
+				B2698AED1CCE02DA0047E0CB /* CameraSampleAreaSquareView.swift */,
+				B2698AEB1CCDF6670047E0CB /* CameraView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2DFE2801C4D5FE900B65901 = {
+			isa = PBXGroup;
+			children = (
+				B2DFE28B1C4D5FE900B65901 /* Laser Processor */,
+				B2DFE2A01C4D5FE900B65901 /* Laser ProcessorTests */,
+				B25913D41D2255B700EE3C0E /* laser-video-processor */,
+				B2DFE28A1C4D5FE900B65901 /* Products */,
+				649587982F1CB250DB3ADFB1 /* Frameworks */,
+				6F5ECAA73DEC75C9D5F57508 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B2DFE28A1C4D5FE900B65901 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2DFE2891C4D5FE900B65901 /* Laser Processor.app */,
+				B2DFE29D1C4D5FE900B65901 /* Laser ProcessorTests.xctest */,
+				B25913D31D2255B700EE3C0E /* laser-video-processor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2DFE28B1C4D5FE900B65901 /* Laser Processor */ = {
+			isa = PBXGroup;
+			children = (
+				B2469C4D1C8AF91000397216 /* Extensions */,
+				B2088E261C57483D001F4199 /* Resources */,
+				B2DC5B331C4F46FE007268BC /* Views */,
+				B2DFE2AC1C4D615200B65901 /* ViewControllers */,
+				B2DFE2B11C4D674300B65901 /* Classes */,
+				B207EC7F1C631BEB006AF5F9 /* GPU */,
+				B2DFE28C1C4D5FE900B65901 /* AppDelegate.swift */,
+				B2DFE2901C4D5FE900B65901 /* Main.storyboard */,
+				B2DFE2931C4D5FE900B65901 /* Assets.xcassets */,
+				B2DFE2951C4D5FE900B65901 /* LaunchScreen.storyboard */,
+				B2DFE2981C4D5FE900B65901 /* Info.plist */,
+				B2726A061C6349D600DF097F /* LP-Bridging-Header.h */,
+			);
+			path = "Laser Processor";
+			sourceTree = "<group>";
+		};
+		B2DFE2A01C4D5FE900B65901 /* Laser ProcessorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2DFE2A11C4D5FE900B65901 /* Laser_ProcessorTests.swift */,
+				B2DFE2A31C4D5FE900B65901 /* Info.plist */,
+			);
+			path = "Laser ProcessorTests";
+			sourceTree = "<group>";
+		};
+		B2DFE2AC1C4D615200B65901 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2DFE2AD1C4D621600B65901 /* DataSetManageTableViewController.swift */,
+				B2DC5B311C4F4635007268BC /* DataSetViewController.swift */,
+				B2DFE2B41C4DD19300B65901 /* CaptureViewController.swift */,
+				B2088E2A1C5749C7001F4199 /* PreferenceViewController.swift */,
+				B23278601C76083A006B3C3D /* PlotView.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2DFE2B11C4D674300B65901 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2726A051C63499C00DF097F /* OpenCVWrapper.h */,
+				B2726A071C634B4500DF097F /* OpenCVWrapper.mm */,
+				B2DFE2B21C4D676B00B65901 /* DataSetManager.swift */,
+				B2DC5B361C4F4B66007268BC /* DataSet.swift */,
+				B2DC5B381C4F4CDC007268BC /* DataSetImage.swift */,
+				B212DF201C57EEF80009B4F6 /* Preference.swift */,
+				B207EC7B1C619EEE006AF5F9 /* Algorithm.swift */,
+				B26182181C87325500794120 /* CalculationManager.swift */,
+				B261821D1C873CF700794120 /* CalculationManagerDelegate.swift */,
+				B261821F1C873D1800794120 /* VideoProcessor.swift */,
+				B261820F1C87113700794120 /* VideoPicker.h */,
+				B26182101C87113700794120 /* VideoPicker.m */,
+				B2698B0D1CCFF1230047E0CB /* Queue.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B25913D21D2255B700EE3C0E /* laser-video-processor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25913E61D2255B700EE3C0E /* Build configuration list for PBXNativeTarget "laser-video-processor" */;
+			buildPhases = (
+				4518AAD5B4527BE198BC7DA1 /* [CP] Check Pods Manifest.lock */,
+				B25913CF1D2255B700EE3C0E /* Sources */,
+				B25913D01D2255B700EE3C0E /* Frameworks */,
+				B25913D11D2255B700EE3C0E /* Resources */,
+				1EA711D37E59019BEF06821F /* [CP] Embed Pods Frameworks */,
+				D793E4EFFBB2CCEE0993849B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "laser-video-processor";
+			productName = "laser-video-processor";
+			productReference = B25913D31D2255B700EE3C0E /* laser-video-processor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2DFE2881C4D5FE900B65901 /* Laser Processor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DFE2A61C4D5FE900B65901 /* Build configuration list for PBXNativeTarget "Laser Processor" */;
+			buildPhases = (
+				F784D917694EA7B1BE6BADB0 /* [CP] Check Pods Manifest.lock */,
+				B2DFE2851C4D5FE900B65901 /* Sources */,
+				B2DFE2861C4D5FE900B65901 /* Frameworks */,
+				B2DFE2871C4D5FE900B65901 /* Resources */,
+				23BCCD7EBED7BBD3EF9956C9 /* [CP] Embed Pods Frameworks */,
+				D0942B7724BD74C741513AEC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Laser Processor";
+			productName = "Laser Processor";
+			productReference = B2DFE2891C4D5FE900B65901 /* Laser Processor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2DFE29C1C4D5FE900B65901 /* Laser ProcessorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DFE2A91C4D5FE900B65901 /* Build configuration list for PBXNativeTarget "Laser ProcessorTests" */;
+			buildPhases = (
+				B2DFE2991C4D5FE900B65901 /* Sources */,
+				B2DFE29A1C4D5FE900B65901 /* Frameworks */,
+				B2DFE29B1C4D5FE900B65901 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2DFE29F1C4D5FE900B65901 /* PBXTargetDependency */,
+			);
+			name = "Laser ProcessorTests";
+			productName = "Laser ProcessorTests";
+			productReference = B2DFE29D1C4D5FE900B65901 /* Laser ProcessorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2DFE2811C4D5FE900B65901 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ParseCool;
+				TargetAttributes = {
+					B25913D21D2255B700EE3C0E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 29CD49UNXW;
+						DevelopmentTeamName = "Xinhong LIU (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+					B2DFE2881C4D5FE900B65901 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 29CD49UNXW;
+					};
+					B2DFE29C1C4D5FE900B65901 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B2DFE2881C4D5FE900B65901;
+					};
+				};
+			};
+			buildConfigurationList = B2DFE2841C4D5FE900B65901 /* Build configuration list for PBXProject "Laser Processor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2DFE2801C4D5FE900B65901;
+			productRefGroup = B2DFE28A1C4D5FE900B65901 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2DFE2881C4D5FE900B65901 /* Laser Processor */,
+				B2DFE29C1C4D5FE900B65901 /* Laser ProcessorTests */,
+				B25913D21D2255B700EE3C0E /* laser-video-processor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B25913D11D2255B700EE3C0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25913DF1D2255B700EE3C0E /* Assets.xcassets in Resources */,
+				B25913E21D2255B700EE3C0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE2871C4D5FE900B65901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DFE2971C4D5FE900B65901 /* LaunchScreen.storyboard in Resources */,
+				B2DFE2941C4D5FE900B65901 /* Assets.xcassets in Resources */,
+				B2DFE2921C4D5FE900B65901 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE29B1C4D5FE900B65901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EA711D37E59019BEF06821F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-laser-video-processor/Pods-laser-video-processor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23BCCD7EBED7BBD3EF9956C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Laser Processor/Pods-Laser Processor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4518AAD5B4527BE198BC7DA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0942B7724BD74C741513AEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Laser Processor/Pods-Laser Processor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D793E4EFFBB2CCEE0993849B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-laser-video-processor/Pods-laser-video-processor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F784D917694EA7B1BE6BADB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B25913CF1D2255B700EE3C0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25913F41D226A5F00EE3C0E /* DraggableView.m in Sources */,
+				B25913EE1D22634500EE3C0E /* OpenCVWrapper.mm in Sources */,
+				B25913EB1D2262EE00EE3C0E /* CalculationManagerDelegate.swift in Sources */,
+				B25913EA1D22617700EE3C0E /* Preference.swift in Sources */,
+				B25913DD1D2255B700EE3C0E /* ViewController.m in Sources */,
+				B25913E91D22617200EE3C0E /* Algorithm.swift in Sources */,
+				B25913E81D22612F00EE3C0E /* CalculationManager.swift in Sources */,
+				B25914021D22A14A00EE3C0E /* CropViewController.m in Sources */,
+				B25913F01D22664200EE3C0E /* DataSet.swift in Sources */,
+				B25913DA1D2255B700EE3C0E /* main.m in Sources */,
+				B25913EC1D22632200EE3C0E /* Queue.swift in Sources */,
+				B25913FF1D22790100EE3C0E /* VideoProcessor.swift in Sources */,
+				B25913D71D2255B700EE3C0E /* AppDelegate.m in Sources */,
+				B25913EF1D22663D00EE3C0E /* DataSetManager.swift in Sources */,
+				B25913F11D22664600EE3C0E /* DataSetImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE2851C4D5FE900B65901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B207EC7E1C631BD2006AF5F9 /* Shaders.metal in Sources */,
+				B212DF211C57EEF80009B4F6 /* Preference.swift in Sources */,
+				B2088E2B1C5749C7001F4199 /* PreferenceViewController.swift in Sources */,
+				B23D18261CCDF1430090C695 /* CameraFocusSquareView.swift in Sources */,
+				B2469C4F1C8AF92B00397216 /* UIImage+LPAdditions.swift in Sources */,
+				B2698AEE1CCE02DA0047E0CB /* CameraSampleAreaSquareView.swift in Sources */,
+				B24CB1AF1C8C0AC0005F8056 /* UIViewController+LPAdditions.swift in Sources */,
+				B26182111C87113700794120 /* VideoPicker.m in Sources */,
+				B2698AEC1CCDF6670047E0CB /* CameraView.swift in Sources */,
+				B2DFE28D1C4D5FE900B65901 /* AppDelegate.swift in Sources */,
+				B261821E1C873CF700794120 /* CalculationManagerDelegate.swift in Sources */,
+				B2DFE2B51C4DD19300B65901 /* CaptureViewController.swift in Sources */,
+				B2DC5B351C4F476D007268BC /* DataSetImageTableViewCell.swift in Sources */,
+				B26182191C87325500794120 /* CalculationManager.swift in Sources */,
+				B2DFE2B31C4D676B00B65901 /* DataSetManager.swift in Sources */,
+				B2DC5B321C4F4635007268BC /* DataSetViewController.swift in Sources */,
+				B2DC5B371C4F4B66007268BC /* DataSet.swift in Sources */,
+				B207EC7C1C619EEE006AF5F9 /* Algorithm.swift in Sources */,
+				B26182201C873D1800794120 /* VideoProcessor.swift in Sources */,
+				B2698B0E1CCFF1230047E0CB /* Queue.swift in Sources */,
+				B2DC5B391C4F4CDC007268BC /* DataSetImage.swift in Sources */,
+				B23278611C76083A006B3C3D /* PlotView.swift in Sources */,
+				B2DFE2AE1C4D621600B65901 /* DataSetManageTableViewController.swift in Sources */,
+				B2726A081C634B4500DF097F /* OpenCVWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DFE2991C4D5FE900B65901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DFE2A21C4D5FE900B65901 /* Laser_ProcessorTests.swift in Sources */,
+				B2469C501C8AF92B00397216 /* UIImage+LPAdditions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2DFE29F1C4D5FE900B65901 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2DFE2881C4D5FE900B65901 /* Laser Processor */;
+			targetProxy = B2DFE29E1C4D5FE900B65901 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B25913E01D2255B700EE3C0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25913E11D2255B700EE3C0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2DFE2901C4D5FE900B65901 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DFE2911C4D5FE900B65901 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2DFE2951C4D5FE900B65901 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2DFE2961C4D5FE900B65901 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B25913E41D2255B700EE3C0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2488A35A7C5CFC9E4C9A574A /* Pods-laser-video-processor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "laser-video-processor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.xinhong.laser-video-processor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Laser Processor/LP-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		B25913E51D2255B700EE3C0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D18F5B62870E3663D5C718 /* Pods-laser-video-processor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "laser-video-processor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.xinhong.laser-video-processor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Laser Processor/LP-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B2DFE2A41C4D5FE900B65901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2DFE2A51C4D5FE900B65901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2DFE2A71C4D5FE900B65901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2020F424CA6A94ED668C1DD /* Pods-Laser Processor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Laser Processor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.xinhong.LaserProcessor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Laser Processor/LP-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		B2DFE2A81C4D5FE900B65901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E466D6A64EF0A40DFDE24021 /* Pods-Laser Processor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Laser Processor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.xinhong.LaserProcessor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Laser Processor/LP-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		B2DFE2AA1C4D5FE900B65901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Laser ProcessorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.xinhong.Laser-ProcessorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Laser Processor.app/Laser Processor";
+			};
+			name = Debug;
+		};
+		B2DFE2AB1C4D5FE900B65901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Laser ProcessorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.xinhong.Laser-ProcessorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Laser Processor.app/Laser Processor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B25913E61D2255B700EE3C0E /* Build configuration list for PBXNativeTarget "laser-video-processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25913E41D2255B700EE3C0E /* Debug */,
+				B25913E51D2255B700EE3C0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DFE2841C4D5FE900B65901 /* Build configuration list for PBXProject "Laser Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DFE2A41C4D5FE900B65901 /* Debug */,
+				B2DFE2A51C4D5FE900B65901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DFE2A61C4D5FE900B65901 /* Build configuration list for PBXNativeTarget "Laser Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DFE2A71C4D5FE900B65901 /* Debug */,
+				B2DFE2A81C4D5FE900B65901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DFE2A91C4D5FE900B65901 /* Build configuration list for PBXNativeTarget "Laser ProcessorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DFE2AA1C4D5FE900B65901 /* Debug */,
+				B2DFE2AB1C4D5FE900B65901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2DFE2811C4D5FE900B65901 /* Project object */;
+}

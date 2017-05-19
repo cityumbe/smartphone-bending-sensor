@@ -1,0 +1,6 @@
+framework module Pods_Laser_Processor {
+  umbrella header "Pods-Laser Processor-umbrella.h"
+
+  export *
+  module * { export * }
+}
